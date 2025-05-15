@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Calendar, FileText, Mail, Search, FileSpreadsheet, Briefcase } from "lucide-react"
+import { Calendar, FileText, Mail, Search, FileSpreadsheet, Briefcase, BarChart, PenTool, Building } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const services = [
@@ -35,16 +35,21 @@ const services = [
     title: "Legal Document Review",
     description: "Basic review of legal documents and contracts to identify potential issues or concerns.",
   },
-  // {
-  //   icon: <PenTool className="h-10 w-10 text-violet-600 dark:text-violet-400" />,
-  //   title: "Content Creation",
-  //   description: "Professional content writing for blogs, newsletters, and social media with a polished tone.",
-  // },
-  // {
-  //   icon: <BarChart className="h-10 w-10 text-violet-600 dark:text-violet-400" />,
-  //   title: "Business Process Optimization",
-  //   description: "Analysis and improvement of administrative workflows to enhance efficiency.",
-  // },
+  {
+    icon: <PenTool className="h-10 w-10 text-violet-600 dark:text-violet-400" />,
+    title: "Content Creation",
+    description: "Professional content writing for blogs, newsletters, and social media with a polished tone.",
+  },
+  {
+    icon: <BarChart className="h-10 w-10 text-violet-600 dark:text-violet-400" />,
+    title: "Business Process Optimization",
+    description: "Analysis and improvement of administrative workflows to enhance efficiency.",
+  },
+   {
+    icon: <Building className="h-10 w-10 text-violet-600 dark:text-violet-400" />,
+    title: "Administrative Support",
+    description: "Comprehensive administrative assistance including office management, filing, and general support tasks.",
+  },
 ]
 
 const containerVariants = {
@@ -82,10 +87,10 @@ export function Services() {
           <Card className="h-full border-violet-100 dark:border-violet-800 hover:shadow-md transition-shadow duration-300">
             <CardHeader className="pb-2">
               <div className="mb-4">{service.icon}</div>
-              <CardTitle className="text-xl text-slate-900 dark:text-white">{service.title}</CardTitle>
+              <CardTitle className="text-base text-slate-900 dark:text-white">{service.title}</CardTitle>
             </CardHeader>
-            <CardContent>
-              <CardDescription className="text-slate-600 dark:text-slate-300 text-base">
+            <CardContent className="-mt-5">
+              <CardDescription className="text-slate-600 dark:text-slate-300 text-sm">
                 {service.description}
               </CardDescription>
             </CardContent>

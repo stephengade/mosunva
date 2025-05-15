@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 
 import { ModeToggle } from "@/components/mode-toggle"
 import { ThemeProvider } from "next-themes"
+import { NavHeader } from "@/components/nav-header"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -23,9 +24,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="fixed top-4 right-4 z-50">
+             <NavHeader />
+          {/* <div className="fixed top-4 right-4 z-50">
             <ModeToggle />
-          </div>
+          </div> */}
           {children}
         </ThemeProvider>
       </body>
