@@ -8,6 +8,7 @@ import {
   FileText,
   Star,
   ArrowRight,
+  Linkedin,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -195,6 +196,17 @@ export default function Home() {
                     <Mail className="h-5 w-5 text-violet-600 dark:text-violet-400 mr-3" />
                     <p>ajayimosunmola2000@gmail.com</p>
                   </div>
+                   <div className="flex items-center mt-2 text-slate-600 dark:text-slate-300">
+                    <Linkedin className="h-5 w-5 text-violet-600 dark:text-violet-400 mr-3" />
+                  
+                      <Link
+                        href="https://www.linkedin.com/in/mosunmola-ajayi/"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                      /in/mosunmola-ajayi
+                      </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -283,9 +295,18 @@ export default function Home() {
           <p>
             © {new Date().getFullYear()} Mosunmola Ajayi. All rights reserved.
           </p>
-          <p className="mt-2 text-sm text-slate-400 mb-5">
+          <p className="mt-2 text-sm text-slate-400">
             Virtual Assistant with Legal Expertise
           </p>
+
+
+          <p className="mb-7 mt-3">Let's connect:  <Link
+                        href="https://www.linkedin.com/in/mosunmola-ajayi/"
+                        target="_blank"
+                        className="text-violet-500 hover:underline"
+                      >
+                      /in/mosunmola-ajayi
+                      </Link></p>
 
           <Link
             target="_blank"
